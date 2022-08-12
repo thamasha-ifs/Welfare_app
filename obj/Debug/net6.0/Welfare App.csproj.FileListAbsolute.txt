@@ -1,0 +1,27 @@
+C:\Users\thwmlk\source\repos\Welfare App\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\thwmlk\source\repos\Welfare App\bin\Debug\net6.0\appsettings.json
+C:\Users\thwmlk\source\repos\Welfare App\bin\Debug\net6.0\Welfare App.exe
+C:\Users\thwmlk\source\repos\Welfare App\bin\Debug\net6.0\Welfare App.deps.json
+C:\Users\thwmlk\source\repos\Welfare App\bin\Debug\net6.0\Welfare App.runtimeconfig.json
+C:\Users\thwmlk\source\repos\Welfare App\bin\Debug\net6.0\Welfare App.dll
+C:\Users\thwmlk\source\repos\Welfare App\bin\Debug\net6.0\Welfare App.pdb
+C:\Users\thwmlk\source\repos\Welfare App\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\thwmlk\source\repos\Welfare App\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\thwmlk\source\repos\Welfare App\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\thwmlk\source\repos\Welfare App\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\thwmlk\source\repos\Welfare App\obj\Debug\net6.0\Welfare App.csproj.AssemblyReference.cache
+C:\Users\thwmlk\source\repos\Welfare App\obj\Debug\net6.0\Welfare App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thwmlk\source\repos\Welfare App\obj\Debug\net6.0\Welfare App.AssemblyInfoInputs.cache
+C:\Users\thwmlk\source\repos\Welfare App\obj\Debug\net6.0\Welfare App.AssemblyInfo.cs
+C:\Users\thwmlk\source\repos\Welfare App\obj\Debug\net6.0\Welfare App.csproj.CoreCompileInputs.cache
+C:\Users\thwmlk\source\repos\Welfare App\obj\Debug\net6.0\Welfare App.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\thwmlk\source\repos\Welfare App\obj\Debug\net6.0\Welfare App.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\thwmlk\source\repos\Welfare App\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\thwmlk\source\repos\Welfare App\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\thwmlk\source\repos\Welfare App\obj\Debug\net6.0\scopedcss\bundle\Welfare App.styles.css
+C:\Users\thwmlk\source\repos\Welfare App\obj\Debug\net6.0\Welfare App.csproj.CopyComplete
+C:\Users\thwmlk\source\repos\Welfare App\obj\Debug\net6.0\Welfare App.dll
+C:\Users\thwmlk\source\repos\Welfare App\obj\Debug\net6.0\refint\Welfare App.dll
+C:\Users\thwmlk\source\repos\Welfare App\obj\Debug\net6.0\Welfare App.pdb
+C:\Users\thwmlk\source\repos\Welfare App\obj\Debug\net6.0\Welfare App.genruntimeconfig.cache
+C:\Users\thwmlk\source\repos\Welfare App\obj\Debug\net6.0\ref\Welfare App.dll
