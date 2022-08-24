@@ -25,3 +25,64 @@ C:\Users\thwmlk\source\repos\Welfare App\obj\Debug\net6.0\refint\Welfare App.dll
 C:\Users\thwmlk\source\repos\Welfare App\obj\Debug\net6.0\Welfare App.pdb
 C:\Users\thwmlk\source\repos\Welfare App\obj\Debug\net6.0\Welfare App.genruntimeconfig.cache
 C:\Users\thwmlk\source\repos\Welfare App\obj\Debug\net6.0\ref\Welfare App.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\appsettings.Development.json
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\appsettings.json
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Welfare App.exe
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Welfare App.deps.json
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Welfare App.runtimeconfig.json
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Welfare App.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Welfare App.pdb
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Humanizer.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\WelfareApp\Welfare_app\obj\Debug\net6.0\Welfare App.csproj.AssemblyReference.cache
+C:\WelfareApp\Welfare_app\obj\Debug\net6.0\Welfare App.GeneratedMSBuildEditorConfig.editorconfig
+C:\WelfareApp\Welfare_app\obj\Debug\net6.0\Welfare App.AssemblyInfoInputs.cache
+C:\WelfareApp\Welfare_app\obj\Debug\net6.0\Welfare App.AssemblyInfo.cs
+C:\WelfareApp\Welfare_app\obj\Debug\net6.0\Welfare App.csproj.CoreCompileInputs.cache
+C:\WelfareApp\Welfare_app\obj\Debug\net6.0\Welfare App.MvcApplicationPartsAssemblyInfo.cs
+C:\WelfareApp\Welfare_app\obj\Debug\net6.0\Welfare App.MvcApplicationPartsAssemblyInfo.cache
+C:\WelfareApp\Welfare_app\obj\Debug\net6.0\staticwebassets.build.json
+C:\WelfareApp\Welfare_app\obj\Debug\net6.0\staticwebassets.development.json
+C:\WelfareApp\Welfare_app\obj\Debug\net6.0\scopedcss\bundle\Welfare App.styles.css
+C:\WelfareApp\Welfare_app\obj\Debug\net6.0\Welfare App.csproj.CopyComplete
+C:\WelfareApp\Welfare_app\obj\Debug\net6.0\Welfare App.dll
+C:\WelfareApp\Welfare_app\obj\Debug\net6.0\refint\Welfare App.dll
+C:\WelfareApp\Welfare_app\obj\Debug\net6.0\Welfare App.pdb
+C:\WelfareApp\Welfare_app\obj\Debug\net6.0\Welfare App.genruntimeconfig.cache
+C:\WelfareApp\Welfare_app\obj\Debug\net6.0\ref\Welfare App.dll

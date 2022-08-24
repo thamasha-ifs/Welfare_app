@@ -1,9 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using Welfare_App.Context;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddDbContext<DataContext>(options =>
+ options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+ );
 
 var app = builder.Build();
 
@@ -15,11 +21,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-//var summaries = new[]
-//{
-//    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-//};
 
 //app.MapGet("/weatherforecast", () =>
 //{
@@ -36,8 +37,3 @@ app.UseHttpsRedirection();
 //.WithName("GetWeatherForecast");
 
 app.Run();
-
-//record WeatherForecast(DateTime Date, int TemperatureC, string? Summary)
-//{
-//    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-//}

@@ -1,29 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\thwmlk\\source\\repos\\Welfare App\\Welfare App.csproj": {}
+    "C:\\WelfareApp\\Welfare_app\\Welfare App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\thwmlk\\source\\repos\\Welfare App\\Welfare App.csproj": {
+    "C:\\WelfareApp\\Welfare_app\\Welfare App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thwmlk\\source\\repos\\Welfare App\\Welfare App.csproj",
+        "projectUniqueName": "C:\\WelfareApp\\Welfare_app\\Welfare App.csproj",
         "projectName": "Welfare App",
-        "projectPath": "C:\\Users\\thwmlk\\source\\repos\\Welfare App\\Welfare App.csproj",
-        "packagesPath": "C:\\Users\\thwmlk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thwmlk\\source\\repos\\Welfare App\\obj\\",
+        "projectPath": "C:\\WelfareApp\\Welfare_app\\Welfare App.csproj",
+        "packagesPath": "C:\\Users\\ankalk\\.nuget\\packages\\",
+        "outputPath": "C:\\WelfareApp\\Welfare_app\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\thwmlk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ankalk\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,6 +44,12 @@
           "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.8, )"
             },
