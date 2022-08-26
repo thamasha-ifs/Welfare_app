@@ -9,5 +9,9 @@ namespace Welfare_App.Context
         { 
         }
         public DbSet<BudgetCategories> BudgetCategories => Set<BudgetCategories>();
+
+        public DbSet<BudgetCategoryItems> BudgetCategoryItems => Set<BudgetCategoryItems>();
+
+        public DbSet<Trips> Trips => Set<Trips>();
     }
 }
