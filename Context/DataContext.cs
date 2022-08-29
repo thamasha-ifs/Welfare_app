@@ -11,6 +11,8 @@ namespace Welfare_App.Context
         public DbSet<BudgetCategories> BudgetCategories => Set<BudgetCategories>();
 
         public DbSet<BudgetCategoryItems> BudgetCategoryItems => Set<BudgetCategoryItems>();
+        public DbSet<Documents> Documents => Set<Documents>();
+        public DbSet<Vendors> Vendors => Set<Vendors>();
 
         public DbSet<Trips> Trips => Set<Trips>();
     }
