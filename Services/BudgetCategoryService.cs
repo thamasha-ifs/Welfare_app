@@ -12,8 +12,8 @@ namespace Welfare_App.Services
         }
 
     
-        public List<BudgetCategories> GetAll() {
-            return _context.BudgetCategories.ToList();  
+        public async Task<List<BudgetCategories>> GetAll() {
+            return await _context.BudgetCategories.ToListAsync();  
         }
     }
 }

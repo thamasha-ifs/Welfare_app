@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Welfare_App.Context;
+using Welfare_App.Entity;
+using Welfare_App.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,7 @@ builder.Services.AddDbContext<DataContext>(options =>
  options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
  );
 builder.Services.AddScoped<DataContext, DataContext>();
+builder.Services.AddScoped<BudgetCategoryService, BudgetCategoryService>();
 
 var app = builder.Build();
 
@@ -23,18 +26,37 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-//app.MapGet("/weatherforecast", () =>
-//{
-//    var forecast = Enumerable.Range(1, 5).Select(index =>
-//       new WeatherForecast
-//       (
-//           DateTime.Now.AddDays(index),
-//           Random.Shared.Next(-20, 55),
-//           summaries[Random.Shared.Next(summaries.Length)]
-//       ))
-//        .ToArray();
-//    return forecast;
-//})
-//.WithName("GetWeatherForecast");
+/*
+ 
+#BudgetdingCategory
+GET /budgetCategory
+GET /budgetCategory/{categoryId}
+PUT /budgetCategory/{categoryId}
+POST /budgetCategory
+DELETE /budgetCategory/{categoryId}
+
+#BudgetCategoryItems
+
+#Trips
+
+#Vendors
+
+#Documents
+
+#CashflowTransactions
+
+---Room Allocation
+#Todo
+
+#Hotels
+
+#RoomTypes
+
+#RoomAllocation
+ 
+*/
+app.MapGet("/budgetCategories", async (BudgetCategoryService budgetCategoryService) =>
+    await budgetCategoryService.GetAll())
+    .WithName("GetAllBudgetCategories");
 
 app.Run();
