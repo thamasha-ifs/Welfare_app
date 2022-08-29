@@ -13,7 +13,10 @@ builder.Services.AddDbContext<DataContext>(options =>
  options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
  );
 builder.Services.AddScoped<DataContext, DataContext>();
+
 builder.Services.AddScoped<BudgetCategoryService, BudgetCategoryService>();
+builder.Services.AddScoped<VendorService, VendorService>();
+builder.Services.AddScoped<DocumentService, DocumentService>();
 
 var app = builder.Build();
 
@@ -58,5 +61,46 @@ DELETE /budgetCategory/{categoryId}
 app.MapGet("/budgetCategories", async (BudgetCategoryService budgetCategoryService) =>
     await budgetCategoryService.GetAll())
     .WithName("GetAllBudgetCategories");
+
+app.MapGet("/vendors/{id}", (int id, VendorService vendorService) => {
+    vendorService.GetVendor(id);
+});
+
+app.MapGet("/vendors", (VendorService vendorService) => {
+    vendorService.GetVendors();
+});
+
+app.MapPost("/vendors", (Vendors vendor, VendorService vendorService ) => {
+    vendorService.AddVendor(vendor);
+});
+
+app.MapPut("/vendors/{id}", (int id , Vendors vendor, VendorService vendorService) => {
+    vendorService.EditVendor(id , vendor);
+});
+
+app.MapPut("/vendors/UpdateAmount/{id}", (int id, double amount, VendorService vendorService) => {
+    vendorService.UpdateBalance(id, amount);
+});
+
+app.MapDelete("/vendors/{id}", (int id, VendorService vendorService) => {
+    vendorService.RemoveVendor(id);
+});
+
+app.MapGet("/documents/{id}", (int id, DocumentService documentService) => {
+    documentService.GetDocument(id);
+});
+
+app.MapGet("/documents", (DocumentService documentService) => {
+    documentService.GetDocuments();
+});
+
+app.MapPost("/documents", (Documents document, DocumentService documentService) => {
+    documentService.AddDocuments(document);
+});
+
+app.MapDelete("/documents/{id}", (int id, DocumentService documentService) => {
+    documentService.RemoveDocument(id);
+});
+
 
 app.Run();
