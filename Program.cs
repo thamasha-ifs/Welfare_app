@@ -58,9 +58,61 @@ DELETE /budgetCategory/{categoryId}
 #RoomAllocation
  
 */
-app.MapGet("/budgetCategories", async (BudgetCategoryService budgetCategoryService) =>
-    await budgetCategoryService.GetAll())
+app.MapGet("/budgetCategories/{id}", async (int id, BudgetCategoryService budgetCategoryService) => {
+    await budgetCategoryService.GetBudgetCategory(id);})
+    .WithName("GetBudgetCategory");
+
+app.MapGet("/budgetCategories", async (BudgetCategoryService budgetCategoryService) => {
+    await budgetCategoryService.GetAll();
+})
     .WithName("GetAllBudgetCategories");
+
+app.MapPost("/budgetCategories", (BudgetCategories category, BudgetCategoryService budgetCategoryService) => {
+    budgetCategoryService.AddCategory(category);})
+    .WithName("AddBudgetCategory");
+
+app.MapPut("/budgetCategories/{id}",async (int id, BudgetCategories category, BudgetCategoryService budgetCategoryService) => {
+     await budgetCategoryService.UpdateCategory(id,category);})
+    .WithName("UpdateBudgetCategory");
+
+app.MapDelete("/budgetCategories/{id}", async (int id, BudgetCategoryService budgetCategoryService) => {
+    await budgetCategoryService.RemoveCategory(id);})
+    .WithName("RemoveBudgetCategory");
+
+app.MapGet("/budgetCategoryItems/{id}", async (int id, BudgetCategoryItemService budgetCategoryItemService) => {
+    await budgetCategoryItemService.GetBudgetCategoryItem(id);
+})
+    .WithName("GetBudgetCategoryItem");
+
+app.MapGet("/budgetCategoryItems", async (BudgetCategoryItemService budgetCategoryItemService) => {
+    await budgetCategoryItemService.GetAll();
+}) 
+    .WithName("GetAllBudgetCategoryItems");
+
+app.MapPost("/budgetCategoryItems", (BudgetCategoryItems categoryItem, BudgetCategoryItemService budgetCategoryItemService) => {
+    budgetCategoryItemService.AddCategoryItem(categoryItem);
+})
+    .WithName("AddBudgetCategoryItem");
+
+app.MapPut("/budgetCategoryItems/{id}", async (int id, BudgetCategoryItems categoryItem, BudgetCategoryItemService budgetCategoryItemService) => {
+    await budgetCategoryItemService.UpdateCategoryItem(id, categoryItem);
+})
+    .WithName("UpdateBudgetCategoryItem");
+
+app.MapDelete("/budgetCategoryItems/{id}", async (int id, BudgetCategoryItemService budgetCategoryItemService) => {
+    await budgetCategoryItemService.RemoveCategoryItem(id);
+})
+    .WithName("RemoveBudgetCategoryItem");
+
+app.MapGet("/budgetCategoryItems/trips/{id}", async (int id, BudgetCategoryItemService budgetCategoryItemService) => {
+    await budgetCategoryItemService.GetBudgetCategoryItemByTrip(id);
+})
+    .WithName("GetBudgetCategoryItemByTrip");
+
+app.MapGet("/budgetCategoryItems/{category}", async (string category, BudgetCategoryItemService budgetCategoryItemService) => {
+    await budgetCategoryItemService.GetBudgetCategoryItemByType(category);
+})
+    .WithName("GetBudgetCategoryItemByCategory");
 
 app.MapGet("/vendors/{id}", (int id, VendorService vendorService) => {
     vendorService.GetVendor(id);
