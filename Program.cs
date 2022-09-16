@@ -1,7 +1,10 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Welfare_App.Context;
 using Welfare_App.Entity;
 using Welfare_App.Services;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,12 +12,27 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+    options.TokenValidationParameters = new TokenValidationParameters() { 
+        ValidateActor = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+
+    }
+);
+
+
 builder.Services.AddDbContext<DataContext>(options =>
  options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
  );
 builder.Services.AddScoped<DataContext, DataContext>();
 
 builder.Services.AddScoped<BudgetCategoryService, BudgetCategoryService>();
+builder.Services.AddScoped<BudgetCategoryItemService, BudgetCategoryItemService>();
 builder.Services.AddScoped<VendorService, VendorService>();
 builder.Services.AddScoped<DocumentService, DocumentService>();
 
@@ -28,6 +46,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseAuthorization();
+app.UseAuthentication();
 
 /*
  
@@ -80,8 +100,7 @@ app.MapDelete("/budgetCategories/{id}", async (int id, BudgetCategoryService bud
     .WithName("RemoveBudgetCategory");
 
 app.MapGet("/budgetCategoryItems/{id}", async (int id, BudgetCategoryItemService budgetCategoryItemService) => {
-    await budgetCategoryItemService.GetBudgetCategoryItem(id);
-})
+    await budgetCategoryItemService.GetBudgetCategoryItem(id);})
     .WithName("GetBudgetCategoryItem");
 
 app.MapGet("/budgetCategoryItems", async (BudgetCategoryItemService budgetCategoryItemService) => {
