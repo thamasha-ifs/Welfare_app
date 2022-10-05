@@ -31,6 +31,8 @@ namespace Welfare_App.Services
             var existingEvent = await GetEventByEventID(item.EventID);
             if (existingEvent != null)
             {
+                existingEvent.StartTime = item.StartTime;
+                existingEvent.EndTime = item.EndTime;
                 existingEvent.Description = item.Description;
 
                 _context.EventAgenda.Update(existingEvent);

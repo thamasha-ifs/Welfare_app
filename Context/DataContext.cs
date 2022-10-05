@@ -17,5 +17,7 @@ namespace Welfare_App.Context
         public DbSet<Trips> Trips => Set<Trips>();
         public DbSet<Employees> Employees => Set<Employees>();
         public DbSet<EventAgenda> EventAgenda => Set<EventAgenda>();
+        public DbSet<EmployeeInfoForTrip> EmployeeInfoForTrip => Set<EmployeeInfoForTrip>();
+        public DbSet<EmailNotifications> EmailNotifications => Set<EmailNotifications>();
     }
 }

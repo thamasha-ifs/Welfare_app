@@ -2,11 +2,13 @@
 
 namespace Welfare_App.Entity
 {
-    public class RoomTypes
+    public class AccomodationVendorRoomTypes
     {
         [Key]
         public int TypeID { get; set; }
+        public int VendorID { get; set; }
         public int HeadCount { get; set; }
         public string Description { get; set; }
+        public bool Availability { get; set; }
     }
 }

@@ -18,9 +18,9 @@ namespace Welfare_App.Services
         {
             return await _context.Employees.FindAsync(EmpNo);
         }
-        public async Task<List<Employees>> GetEmployeeByName(string FName, string LName)
+        public async Task<List<Employees>> GetEmployeeByName(string FName)
         {
-            return await _context.Employees.Where(e => e.Fname == FName && e.Lname == LName).ToListAsync();
+            return await _context.Employees.Where(e => e.Fname == FName).ToListAsync();
         }
         public async Task AddEmployees(Employees employee)
         {

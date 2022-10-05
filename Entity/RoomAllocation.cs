@@ -7,7 +7,8 @@ namespace Welfare_App.Entity
         [Key]
         public int AllocationID { get; set; }
         public int TypeID { get; set; }
-        public string EmpNos { get; set; }
-        public string Others { get; set; }
+        public string RoomNumber { get; set; }
+        public string EmpIDs { get; set; }
+        public string Remarks { get; set; }
     }
 }

@@ -5,6 +5,7 @@ namespace Welfare_App.Entity
     public class Employees
     {
         [Key]
+        public int EmpID { get; set; }
         public int EmpNo { get; set; }
         public string Fname { get; set; }
         public string Lname { get; set; }
