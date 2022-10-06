@@ -9,8 +9,9 @@ namespace Welfare_App.Entity
         public int EmpNo { get; set; }
         public string Fname { get; set; }
         public string Lname { get; set; }
+        public string Gender { get; set; }
         public string Email { get; set; }
         public string Designation { get; set; }
-
+        public string UserRole { get; set; }
     }
 }
