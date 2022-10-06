@@ -203,7 +203,7 @@ app.MapDelete("/employees/RemoveEmployee/{id}", async (int id, EmployeeService e
 
 //for event agenda
 app.MapGet("/eventAgenda/GetEventAgendaByTripID/{id}", async (int id, EventAgendaService eventAgendaService) => {
-    await eventAgendaService.GetEventAgendaByTrip(id);
+    return await eventAgendaService.GetEventAgendaByTrip(id);
 });
 
 app.MapPost("/eventAgenda/AddEvent", async (EventAgenda newItem, EventAgendaService eventAgendaService) => {
