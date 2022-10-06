@@ -178,49 +178,49 @@ app.MapDelete("/documents/{id}", (int id, DocumentService documentService) => {
 
 //for employees
 app.MapGet("/employees", async (EmployeeService employeeService) => {
-    await employeeService.GetEmployees();
+    return await employeeService.GetAllEmployees();
 }).WithName("GetAllEmployees");
 
-app.MapGet("/employees/{id}", async (int EmpNo, EmployeeService employeeService) => {
-    await employeeService.GetEmployeeByEmpNo(EmpNo);
+app.MapGet("/employees/GetEmployeeByEmpNo/{id}", (int id, EmployeeService employeeService) => {
+    return employeeService.GetEmployeeByEmpNo(id);
 });
 
-app.MapGet("/employees/{fname}", async (string FName, EmployeeService employeeService) => {
-    await employeeService.GetEmployeeByName(FName);
+app.MapGet("/employees/GetEmployeeByFirstName/{fname}", async (string fname, EmployeeService employeeService) => {
+    return await employeeService.GetEmployeeByName(fname);
 });
 
 app.MapPost("/employees/AddEmployee", async (Employees employee, EmployeeService employeeService) => {
     await employeeService.AddEmployees(employee);
 });
 
-app.MapPut("/employees/UpdateEmployee/{id}", async (int EmpNo, Employees employee, EmployeeService employeeService) => {
-    await employeeService.EditEmployee(EmpNo, employee);
+app.MapPut("/employees/UpdateEmployee/{id}", async (int id, Employees employee, EmployeeService employeeService) => {
+    await employeeService.EditEmployee(id, employee);
 });
 
-app.MapDelete("/employees/RemoveEmployee/{id}", async (int EmpNo, EmployeeService employeeService) => {
-    await employeeService.RemoveEmployee(EmpNo);
+app.MapDelete("/employees/RemoveEmployee/{id}", async (int id, EmployeeService employeeService) => {
+    await employeeService.RemoveEmployee(id);
 });
 
 //for event agenda
-app.MapGet("/eventAgenda/GetEventAgendaByTripID/{id}", async (int tripID, EventAgendaService eventAgendaService) => {
-    await eventAgendaService.GetEventAgendaByTrip(tripID);
+app.MapGet("/eventAgenda/GetEventAgendaByTripID/{id}", async (int id, EventAgendaService eventAgendaService) => {
+    await eventAgendaService.GetEventAgendaByTrip(id);
 });
 
 app.MapPost("/eventAgenda/AddEvent", async (EventAgenda newItem, EventAgendaService eventAgendaService) => {
     await eventAgendaService.AddEventForAgenda(newItem);
 });
 
-app.MapPut("/eventAgenda/UpdateEvent/{event}", async (EventAgenda item, EventAgendaService eventAgendaService) => {
+app.MapPut("/eventAgenda/UpdateEvent/{item}", async (EventAgenda item, EventAgendaService eventAgendaService) => {
     await eventAgendaService.UpdateAgendaEvent(item);
 });
 
-app.MapPost("/employees/RemoveEvent/{id}", async (int eventID, EventAgendaService eventAgendaService) => {
-    await eventAgendaService.RemoveEventFromAgenda(eventID);
+app.MapPost("/employees/RemoveEvent/{id}", async (int id, EventAgendaService eventAgendaService) => {
+    await eventAgendaService.RemoveEventFromAgenda(id);
 });
 
 // for reporting
-app.MapGet("/report/GetEmployeeInfoForTrip/{id}", async (int tripID, ReportingService reportingService) => {
-    await reportingService.GetEmployeeInfoForTrip(tripID);
+app.MapGet("/report/GetEmployeeInfoForTrip/{id}", async (int id, ReportingService reportingService) => {
+    await reportingService.GetEmployeeInfoForTrip(id);
 });
 
 app.Run();
