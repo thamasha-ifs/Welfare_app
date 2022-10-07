@@ -5,6 +5,7 @@ using Welfare_App.Entity;
 using Welfare_App.Services;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,18 +39,22 @@ builder.Services.AddScoped<DocumentService, DocumentService>();
 builder.Services.AddScoped<EmployeeService, EmployeeService>();
 builder.Services.AddScoped<EventAgendaService, EventAgendaService>();
 builder.Services.AddScoped<ReportingService, ReportingService>();
+builder.Services.AddScoped<EmployeeInfoForTripService, EmployeeInfoForTripService>();
+builder.Services.AddScoped<RoomTypesService, RoomTypesService>();
+builder.Services.AddScoped<RoomAllocationService, RoomAllocationService>();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
-app.UseAuthorization();
+//app.UseAuthorization();
 app.UseAuthentication();
 
 /*
@@ -78,7 +83,7 @@ DELETE /budgetCategory/{categoryId}
 
 #RoomTypes
 
-#RoomAllocation
+#RoomAllocations
  
 */
 app.MapGet("/budgetCategories/{id}", async (int id, BudgetCategoryService budgetCategoryService) => {
@@ -221,6 +226,69 @@ app.MapPost("/employees/RemoveEvent/{id}", async (int id, EventAgendaService eve
 // for reporting
 app.MapGet("/report/GetEmployeeInfoForTrip/{id}", async (int id, ReportingService reportingService) => {
     await reportingService.GetEmployeeInfoForTrip(id);
+});
+
+// for accomodation vendor room types
+app.MapGet("/roomTypes/{id}", (int typeID, RoomTypesService roomTypesService) => {
+    roomTypesService.GetRoomType(typeID);
+});
+
+app.MapGet("/roomTypes", (RoomTypesService roomTypesService) => {
+    roomTypesService.GetRoomTypes();
+});
+
+app.MapPost("/roomTypes", (AccomodationVendorRoomTypes vendorRoom, RoomTypesService roomTypesService) => {
+    roomTypesService.AddRoomType(vendorRoom);
+});
+
+app.MapPut("/roomTypes/{id}", (int typeID, AccomodationVendorRoomTypes vendorRoom, RoomTypesService roomTypesService) => {
+    roomTypesService.UpdateRoomType(typeID, vendorRoom);
+});
+
+app.MapDelete("/roomTypes/{id}", (int typeID, RoomTypesService roomTypesService) => {
+    roomTypesService.RemoveRoomType(typeID);
+});
+
+// for employee trip info
+app.MapGet("/info/{id}", (int tripEmpDetailID, EmployeeInfoForTripService employeeInfoForTripService) => {
+    employeeInfoForTripService.GetInfo(tripEmpDetailID);
+});
+
+app.MapGet("/info", (EmployeeInfoForTripService employeeInfoForTripService) => {
+    employeeInfoForTripService.GetAllInfo();
+});
+
+app.MapPost("/info", (EmployeeInfoForTrip info, EmployeeInfoForTripService employeeInfoForTripService) => {
+    employeeInfoForTripService.AddInfo(info);
+});
+
+app.MapPut("/info/{id}", (int tripEmpDetailID, EmployeeInfoForTrip info, EmployeeInfoForTripService employeeInfoForTripService) => {
+    employeeInfoForTripService.UpdateInfo(tripEmpDetailID, info);
+});
+
+app.MapDelete("/info/{id}", (int tripEmpDetailID, EmployeeInfoForTripService employeeInfoForTripService) => {
+    employeeInfoForTripService.RemoveInfo(tripEmpDetailID);
+});
+
+// for room allocations
+app.MapGet("/roomAllocations/{id}", (int allocationID, RoomAllocationService roomAllocationService) => {
+    roomAllocationService.GetRoomAllocation(allocationID);
+});
+
+app.MapGet("/roomAllocations", (RoomAllocationService roomAllocationService) => {
+    roomAllocationService.GetRoomAllocations();
+});
+
+app.MapPost("/roomAllocations", (RoomAllocations roomAllocation, RoomAllocationService roomAllocationService) => {
+    roomAllocationService.AddRoomAllocation(roomAllocation);
+});
+
+app.MapPut("/roomAllocations/{id}", (int allocationID, RoomAllocations roomAllocation, RoomAllocationService roomAllocationService) => {
+    roomAllocationService.UpdateRoomAllocations(allocationID, roomAllocation);
+});
+
+app.MapDelete("/roomAllocations/{id}", (int allocationID, RoomAllocationService roomAllocationService) => {
+    roomAllocationService.RemoveRoomAllocation(allocationID);
 });
 
 app.Run();
