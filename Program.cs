@@ -87,11 +87,11 @@ DELETE /budgetCategory/{categoryId}
  
 */
 app.MapGet("/budgetCategories/{id}", async (int id, BudgetCategoryService budgetCategoryService) => {
-    await budgetCategoryService.GetBudgetCategory(id);})
+    return await budgetCategoryService.GetBudgetCategory(id);})
     .WithName("GetBudgetCategory");
 
 app.MapGet("/budgetCategories", async (BudgetCategoryService budgetCategoryService) => {
-    await budgetCategoryService.GetAll();
+    return await budgetCategoryService.GetAll();
 })
     .WithName("GetAllBudgetCategories");
 
@@ -108,11 +108,11 @@ app.MapDelete("/budgetCategories/{id}", async (int id, BudgetCategoryService bud
     .WithName("RemoveBudgetCategory");
 
 app.MapGet("/budgetCategoryItems/{id}", async (int id, BudgetCategoryItemService budgetCategoryItemService) => {
-    await budgetCategoryItemService.GetBudgetCategoryItem(id);})
+    return await budgetCategoryItemService.GetBudgetCategoryItem(id);})
     .WithName("GetBudgetCategoryItem");
 
 app.MapGet("/budgetCategoryItems", async (BudgetCategoryItemService budgetCategoryItemService) => {
-    await budgetCategoryItemService.GetAll();
+    return await budgetCategoryItemService.GetAll();
 }) 
     .WithName("GetAllBudgetCategoryItems");
 
@@ -132,21 +132,21 @@ app.MapDelete("/budgetCategoryItems/{id}", async (int id, BudgetCategoryItemServ
     .WithName("RemoveBudgetCategoryItem");
 
 app.MapGet("/budgetCategoryItems/trips/{id}", async (int id, BudgetCategoryItemService budgetCategoryItemService) => {
-    await budgetCategoryItemService.GetBudgetCategoryItemByTrip(id);
+    return await budgetCategoryItemService.GetBudgetCategoryItemByTrip(id);
 })
     .WithName("GetBudgetCategoryItemByTrip");
 
 app.MapGet("/budgetCategoryItems/{category}", async (string category, BudgetCategoryItemService budgetCategoryItemService) => {
-    await budgetCategoryItemService.GetBudgetCategoryItemByType(category);
+    return await budgetCategoryItemService.GetBudgetCategoryItemByType(category);
 })
     .WithName("GetBudgetCategoryItemByCategory");
 
 app.MapGet("/vendors/{id}", (int id, VendorService vendorService) => {
-    vendorService.GetVendor(id);
+    return vendorService.GetVendor(id);
 });
 
 app.MapGet("/vendors", (VendorService vendorService) => {
-    vendorService.GetVendors();
+    return vendorService.GetVendors();
 });
 
 app.MapPost("/vendors", (Vendors vendor, VendorService vendorService ) => {
@@ -166,11 +166,11 @@ app.MapDelete("/vendors/{id}", (int id, VendorService vendorService) => {
 });
 
 app.MapGet("/documents/{id}", (int id, DocumentService documentService) => {
-    documentService.GetDocument(id);
+    return documentService.GetDocument(id);
 });
 
 app.MapGet("/documents", (DocumentService documentService) => {
-    documentService.GetDocuments();
+    return documentService.GetDocuments();
 });
 
 app.MapPost("/documents", (Documents document, DocumentService documentService) => {
@@ -230,11 +230,11 @@ app.MapGet("/report/GetEmployeeInfoForTrip/{id}", async (int id, ReportingServic
 
 // for accomodation vendor room types
 app.MapGet("/roomTypes/{id}", (int typeID, RoomTypesService roomTypesService) => {
-    roomTypesService.GetRoomType(typeID);
+    return roomTypesService.GetRoomType(typeID);
 });
 
 app.MapGet("/roomTypes", (RoomTypesService roomTypesService) => {
-    roomTypesService.GetRoomTypes();
+    return roomTypesService.GetRoomTypes();
 });
 
 app.MapPost("/roomTypes", (AccomodationVendorRoomTypes vendorRoom, RoomTypesService roomTypesService) => {
@@ -251,11 +251,11 @@ app.MapDelete("/roomTypes/{id}", (int typeID, RoomTypesService roomTypesService)
 
 // for employee trip info
 app.MapGet("/info/{id}", (int tripEmpDetailID, EmployeeInfoForTripService employeeInfoForTripService) => {
-    employeeInfoForTripService.GetInfo(tripEmpDetailID);
+    return employeeInfoForTripService.GetInfo(tripEmpDetailID);
 });
 
 app.MapGet("/info", (EmployeeInfoForTripService employeeInfoForTripService) => {
-    employeeInfoForTripService.GetAllInfo();
+    return employeeInfoForTripService.GetAllInfo();
 });
 
 app.MapPost("/info", (EmployeeInfoForTrip info, EmployeeInfoForTripService employeeInfoForTripService) => {
@@ -272,11 +272,11 @@ app.MapDelete("/info/{id}", (int tripEmpDetailID, EmployeeInfoForTripService emp
 
 // for room allocations
 app.MapGet("/roomAllocations/{id}", (int allocationID, RoomAllocationService roomAllocationService) => {
-    roomAllocationService.GetRoomAllocation(allocationID);
+    return roomAllocationService.GetRoomAllocation(allocationID);
 });
 
 app.MapGet("/roomAllocations", (RoomAllocationService roomAllocationService) => {
-    roomAllocationService.GetRoomAllocations();
+    return roomAllocationService.GetRoomAllocations();
 });
 
 app.MapPost("/roomAllocations", (RoomAllocations roomAllocation, RoomAllocationService roomAllocationService) => {

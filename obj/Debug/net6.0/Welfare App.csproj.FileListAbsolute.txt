@@ -33,6 +33,7 @@ C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Welfare App.runtimeconfig.json
 C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Welfare App.dll
 C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Welfare App.pdb
 C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Humanizer.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -41,6 +42,7 @@ C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relatio
 C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
 C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
 C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
@@ -86,5 +88,3 @@ C:\WelfareApp\Welfare_app\obj\Debug\net6.0\refint\Welfare App.dll
 C:\WelfareApp\Welfare_app\obj\Debug\net6.0\Welfare App.pdb
 C:\WelfareApp\Welfare_app\obj\Debug\net6.0\Welfare App.genruntimeconfig.cache
 C:\WelfareApp\Welfare_app\obj\Debug\net6.0\ref\Welfare App.dll
-C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\WelfareApp\Welfare_app\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
