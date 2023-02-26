@@ -156,11 +156,11 @@ app.MapGet("/vendors", (VendorService vendorService) => {
 });
 
 app.MapPost("/vendors", (Vendors vendor, VendorService vendorService ) => {
-    vendorService.AddVendor(vendor);
+    return vendorService.AddVendor(vendor);
 });
 
 app.MapPut("/vendors/{id}", (int id , Vendors vendor, VendorService vendorService) => {
-    vendorService.EditVendor(id , vendor);
+     return vendorService.EditVendor(id , vendor);
 });
 
 app.MapPut("/vendors/UpdateAmount/{id}", (int id, double amount, VendorService vendorService) => {

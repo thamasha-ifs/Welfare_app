@@ -18,12 +18,13 @@ namespace Welfare_App.Services
         {
             return _context.Vendors.Find(vendorId);
         }
-        public void AddVendor(Vendors vendor)
+        public Vendors AddVendor(Vendors vendor)
         {
             _context.Vendors.Add(vendor);
             _context.SaveChanges();
+            return vendor;
         }
-        public void EditVendor(int vendorId , Vendors vendor)
+        public Vendors EditVendor(int vendorId, Vendors vendor)
         {
             var existingvendor = GetVendor(vendorId);
             if (existingvendor != null)
@@ -36,7 +37,13 @@ namespace Welfare_App.Services
 
                 _context.Vendors.Update(existingvendor);
                 _context.SaveChanges();
-            }           
+                return existingvendor;
+            }
+            else 
+            {
+                throw new Exception($"Invalid Vendor Id : {vendorId}.");
+            }
+            
         }
         public void UpdateBalance(int vendorId, double payment)
         {
