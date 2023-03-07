@@ -3,7 +3,7 @@ using Welfare_App.Entity;
 
 namespace Welfare_App.Services
 {
-    public class TransactionService
+    public class TransactionService 
     {
         DataContext _context;
         public TransactionService(DataContext context)
@@ -14,14 +14,11 @@ namespace Welfare_App.Services
         {
             return _context.Transactions.ToList();
         }
-        public Transactions GetTransaction(int TransactionID)
-        {
-            return _context.Transactions.Find(TransactionID);
-        }
-        public void AddTransactions(Transactions transactions)
+        public Transactions AddTransactions(Transactions transactions)
         {
             _context.Transactions.Add(transactions);
             _context.SaveChanges();
+            return transactions;
         }
     }
 }
