@@ -9,6 +9,6 @@ namespace Welfare_App.Entity
         public int VendorID { get; set; }
         public int HeadCount { get; set; }
         public string Description { get; set; }
-        public bool Availability { get; set; }
+        public int Availability { get; set; }
     }
 }
