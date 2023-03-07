@@ -48,6 +48,7 @@ builder.Services.AddScoped<ReportingService, ReportingService>();
 builder.Services.AddScoped<EmployeeInfoForTripService, EmployeeInfoForTripService>();
 builder.Services.AddScoped<RoomTypesService, RoomTypesService>();
 builder.Services.AddScoped<RoomAllocationService, RoomAllocationService>();
+builder.Services.AddScoped<TransactionService, TransactionService>();
 
 var app = builder.Build();
 
@@ -295,6 +296,14 @@ app.MapPut("/roomAllocations/{id}", (int allocationID, RoomAllocations roomAlloc
 
 app.MapDelete("/roomAllocations/{id}", (int allocationID, RoomAllocationService roomAllocationService) => {
     roomAllocationService.RemoveRoomAllocation(allocationID);
+});
+
+app.MapGet("/transactions", (TransactionService transactionService) => {
+    return transactionService.GetTransactions();
+});
+
+app.MapPost("/transactions", (Transactions transactions, TransactionService transactionService) => {
+    return transactionService.AddTransactions(transactions);
 });
 
 app.Run();
