@@ -7,7 +7,9 @@ namespace Welfare_App.Entity
         [Key]
         public int TransactionID { get; set; }
         public int VendorId { get; set; }
+        public string VendorName { get; set; }
         public int BudgetItemId { get; set; }
+        public string BudgetItemName { get; set; }
         public int TransactionAmount { get; set; }
         public DateTime TransactionDate { get; set; }
     }
