@@ -2532,11 +2532,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\WelfareApp\\Welfare_app\\Welfare App.csproj",
+      "projectUniqueName": "C:\\WelfareAppBE\\Welfare_app\\Welfare App.csproj",
       "projectName": "Welfare App",
-      "projectPath": "C:\\WelfareApp\\Welfare_app\\Welfare App.csproj",
+      "projectPath": "C:\\WelfareAppBE\\Welfare_app\\Welfare App.csproj",
       "packagesPath": "C:\\Users\\ankalk\\.nuget\\packages\\",
-      "outputPath": "C:\\WelfareApp\\Welfare_app\\obj\\",
+      "outputPath": "C:\\WelfareAppBE\\Welfare_app\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

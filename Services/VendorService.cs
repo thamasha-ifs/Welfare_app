@@ -34,6 +34,8 @@ namespace Welfare_App.Services
                 existingvendor.ContactName = vendor.ContactName;
                 existingvendor.Name = vendor.Name;
                 existingvendor.TotalCost = vendor.TotalCost;
+                existingvendor.BudgetCategoryItemId = vendor.BudgetCategoryItemId;
+                existingvendor.BudgetCategoryId = vendor.BudgetCategoryId;
 
                 _context.Vendors.Update(existingvendor);
                 _context.SaveChanges();
